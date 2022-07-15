@@ -46,3 +46,8 @@ Aunque puede haber algunas violaciones al OCP.
 
 - Lo podemos detectar cuando los cambios afectan a nuestra clase o módulo. 
 - Cuando una clase o módulo afecta muchas capas (Presentación, Almacenamiento, etc.).
+
+#### Principio de Substitución de Liskov
+
+Siendo _U_ sun subtipo de _T_, cualquier instancia de _T_ debería poder ser sustituida por cualquier instancia de _U_ sin alterar las propiedades del sistema. 
+
