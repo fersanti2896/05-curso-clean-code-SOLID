@@ -58,3 +58,24 @@ Establece que los clientes no deberían verse forzados a depender de interfaces 
 Aunque puede haber alguna violaciones al ISP.
 
 - Si las interfaces que diseñamos nos obligan a violar los Principios de Responsabilidad Única y substitución de Liskov. 
+
+#### Pincipio de Inversión de Dependencias
+
+- Los componentes importantes de capas superiores no deben de depender de componentes que son menos importantes. 
+
+- Ambos deberían de depender de abstraciones, es decir, de clases abstractas que de ella extiende
+
+Los componentes más importantes son aquellos centrados en resolver el problema subyacente al negocio, es decir, la capa de dominio. 
+
+Los menos importantes son los que están próximos a la infraestructura, es decir, aquellos relacionados con la UI, la persistencia, la comunicación con las APIs externas, etc. 
+
+![inversion-depe](/src/images/inversion-dependencias.PNG)
+
+Depender de abstraciones nos estamos refiriendo a clases abstractas o interfaces, por lo cual, uno de los motivos más importantes por el cual las reglas de negocio o capa de dominio deben de depender de estas y no de concreciones es que aumenta su tolerancia al cambio. 
+
+Cada cambio en un componente abstracto implica un cambio en su implementación, por el contrario, los cambios en implementaciones concretas, la mayoría de las veces, no requieren cambios en las interfaces que implementa. 
+
+Por lo que se implementa la inyección de dependencias, el cual significa que en un modulo o componente requiere de otro para poder realizar su trabajo. 
+
+En algún momento nuestro porgrama o aplicación llegará a estar formado por muchos módulos, cuando esto pase, es cuando debemos usar inyección de dependencias. 
+
