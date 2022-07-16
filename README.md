@@ -51,3 +51,10 @@ Aunque puede haber algunas violaciones al OCP.
 
 Siendo _U_ sun subtipo de _T_, cualquier instancia de _T_ debería poder ser sustituida por cualquier instancia de _U_ sin alterar las propiedades del sistema. 
 
+#### Principio de Segregación de Interfaz (ISP)
+
+Establece que los clientes no deberían verse forzados a depender de interfaces que no usan, debe ser tolerante a cambios. 
+
+Aunque puede haber alguna violaciones al ISP.
+
+- Si las interfaces que diseñamos nos obligan a violar los Principios de Responsabilidad Única y substitución de Liskov. 
